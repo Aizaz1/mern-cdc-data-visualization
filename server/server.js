@@ -16,6 +16,9 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
+const vaccinationDataRouter = require('./routes/vaccinationData');
+app.use(vaccinationDataRouter);
+
 app.listen(5000, () => {
   console.log('Server is running on port 5000');
 });
